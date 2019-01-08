@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Student Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="studentApp.css">
+</head>
+<body>
+	<form action="studentApp.php" method="get">
+		<fieldset>
+			<legend>
+				Personel Details
+			</legend>
+
+			<detail>First Name : </detail> 
+			<br>
+			<input type="text" name="fName">
+			<br>	
+					
+			<detail>Last Name : </detail>
+			<br>
+			<input type="text" name="lName">
+			<br>
+
+			<detail>Sex : </detail>
+			<input type="radio" name="sex" value="male"> Male </input>
+			<input type="radio" name="sex" value="female"> Female </input>
+			<br>
+
+			<detail>Date of Birth : </detail>
+			<br>
+			<input type="date" name="dob">
+			<br>
+
+			<detail>Home Address : </detail>
+			<br>
+			<input type="text" name="homeAdd">
+			<br>
+
+			<detail>Contact No : </detail>
+			<br>
+			<input type="text" name="contactNo">
+			<br>
+
+			<detail>E-mail : </detail>
+			<br>
+			<input type="text" name="mail">
+			<br>
+		</fieldset>
+
+		<br>
+		<br>
+		<br>
+
+		<fieldset>
+			<legend>
+				University Details
+			</legend>
+
+			<detail>Faculty : </detail>
+			<br>
+			<select name="faculty"> 
+				<option value="AHS"> AHS </option>
+				<option value="Agriculture"> Agriculture </option>
+				<option value="Arts"> Arts </option>
+				<option value="Dental"> Dental Sciences </option>
+	   			<option value="Engineering"> Engineering </option>
+	   			<option value="Management"> Management </option>
+	   			<option value="Medicine"> Medicine </option>
+				<option value="Science"> Science </option>
+	   			<option value="Vetnery"> Vetnery Sciences </option>
+	    	</select>
+	    	<br>
+
+	    	<detail>Registerd No : </detail>
+			<br>
+			<input type="text" name="regNo">
+			<br>
+
+			<detail>Enrolled date : </detail>
+			<br>
+			<input type="date" name="enrolDate">
+			<br>
+		</fieldset>
+
+		<center>
+			<input type="submit" value="Register"> </input>
+		</center>
+	</form>
+
+</body>
+</html>
