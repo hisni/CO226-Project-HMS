@@ -21,7 +21,6 @@ $(window).on('load', function() {
 		event.preventDefault();
 	});
 
-
 	/*------------------
 		Background Set
 	--------------------*/
@@ -37,7 +36,6 @@ $(window).on('load', function() {
 	$('.message a').click(function(){
 		$('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 	});
-
 	
 	/*------------------
 		Hero Slider

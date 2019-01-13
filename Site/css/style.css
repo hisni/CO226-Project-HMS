@@ -647,9 +647,25 @@ ol {
 	margin-bottom: 18px;
 }
 
-.contact-form .site-btn {
+.formct input[type=submit]{
+font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: rgb(164, 143, 238);
 	min-width: 147px;
+	border: 0;
+	padding: 15px;
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
 }
+
+.formct input[type=submit]:hover, .formct input[type=submit]:active, .formct input[type=submit]:focus {
+	background: rgb(161, 160, 163);
+	color: #000;
+  }
 
 .contact-form ::-webkit-input-placeholder {
 	color: #7c7c7c;

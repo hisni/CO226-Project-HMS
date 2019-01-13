@@ -1,3 +1,22 @@
+<?php
+
+//connectivity
+require('config.php');
+
+if(isset($_POST['submit']))
+{
+    $name = $_POST['Name'];
+    $email = $_POST['Email'];
+    $subject = $_POST['Subject'];
+    $message = $_POST['message'];
+
+    $query = "INSERT INTO messages VALUES ('NULL','$name','$email','$subject','$message')";
+    mysqli_query($con,$query);
+    echo '<script>alert("Message")</script>';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -47,11 +66,11 @@
 				<ul class="main-menu">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About us</a></li>
-					<li class="active"><a href="contact.html">Contact</a></li>
+					<li class="active"><a href="contact.php">Contact</a></li>
 					
 				</ul>
 				<div class="header-btns">
-					<a href="login.html" class="site-btn sb-c1">Login</a>
+					<a href="login.php" class="site-btn sb-c1">Login</a>
 					<div class="dropdown">
 						<a href="#" class="site-btn sb-c2">Register</a>
 							<div class="dropdown-content">
@@ -83,7 +102,7 @@
 			<div class="row">
 				<div class="col-lg-6 contact-text">
 					<h4 class="contact-title">Contact us</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris. Etiam at nibh non dolor porttitor fermentum eu vel mi. Nunc ultricies, odio at feugiat tincidunt, turpis nibh vulputate metus, eu lobortis augue lorem dictum mi. Suspendisse nec condimentum risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ut vestibulum quam.</p>
+					<p>Send us your Problem</p>
 					<div class="contact-info">
 						<div class="ci-icon">
 							<img src="img/contact-icons/1.png" alt="">
@@ -100,22 +119,24 @@
 						<div class="ci-icon">
 							<img src="img/contact-icons/3.png" alt="">
 						</div>
-						<h6>office@yourbusiness.com</h6>
+						<h6>admin@eng.pdn.ac.lk</h6>
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<h4 class="contact-title">Get in touch</h4>
-					<form class="contact-form">
-						<input type="text" placeholder="Name">
-						<input type="email" placeholder="E-mail">
-						<input type="text" placeholder="Subject">
-						<textarea placeholder="Message"></textarea>
-						<button class="site-btn sb-c1">Submit</button>
-					</form>
+                    <h4 class="contact-title">Get in touch</h4>
+                    <div class="formct">
+                        <form class="contact-form" method="post">
+                            <input type="text" name="Name" placeholder="Name">
+                            <input type="email" name="Email" placeholder="E-mail">
+                            <input type="text" name="Subject" placeholder="Subject">
+                            <textarea name="message" placeholder="Message"></textarea>
+                            <input type="submit" value="Submit" name="submit"/>
+                        </form>
+                    </div>
 				</div>
 			</div>
 			<div class="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d986.6151515945124!2d80.59613762520735!3d7.255076392643422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2slk!4v1547141722830" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.4691134598727!2d80.59573672915586!3d7.254899199672705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368d323ff677f%3A0xc116d0dd96eadf43!2sAccommodation+Unit!5e0!3m2!1sen!2slk!4v1547296304009" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</div>
 	</section>
@@ -133,7 +154,7 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About us</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</div>
 			<div class="footer-copy">

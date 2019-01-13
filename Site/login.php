@@ -15,13 +15,13 @@ if(isset($_POST['create']))
     $ret = mysqli_num_rows($cq);
     if($ret == true)
     {
-        echo "<center><h2 style='color:red'>Username already exists</h2></center>";
-    }
+        echo '<script>alert("Username already exists!")</script>';
+	}
     else
     {
         $query = "INSERT INTO admins VALUES ('$n','$pc','$em')";
-        mysqli_query($con,$query);
-        echo "<center><h2 style='color:green'>Details Saved!</h2></center>";
+		mysqli_query($con,$query);
+		echo '<script>alert("Details Saved!")</script>';
     }
 
 }
@@ -45,7 +45,8 @@ if(isset($_POST['login']))
     }
     else
     {
-        echo "<center><h2 style='color:red'>ACCESS DENIED</h2></center>";
+		echo '<script>alert("Invalid Username/Password!")</script>';
+		
     }
 }
 
