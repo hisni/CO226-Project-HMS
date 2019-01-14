@@ -2,9 +2,54 @@
 <html>
 <head>
 	<title>Hostel Registration Form</title>
+	<link href="img/uop.png" rel="shortcut icon"/>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
 	<link rel="stylesheet" type="text/css" href="hostelApp.css">
+
 </head>
 <body>
+
+
+	<header class="header-section">
+		<div class="container">
+			<a href="index.html" class="site-logo">
+				<img src="img/logo.png" alt="logo">
+			</a>
+			<!-- Switch button -->
+			<div class="nav-switch">
+				<div class="ns-bar"></div>
+			</div>
+			<div class="header-right">
+				<ul class="main-menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="contact.php">Contact</a></li>
+					
+				</ul>
+				<div class="header-btns">
+					<a href="login.php" class="site-btn sb-c1">Login</a>
+					<div class="dropdown">
+						<a href="#" class="site-btn sb-c2">Register</a>
+							<div class="dropdown-content">
+								<a href="studentApp.html">Student</a>
+								<a href="employeeApp.html">Employee</a>
+								<a href="hostelApp.html">Hostel</a>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+
+	<div class="bottom">
 	<center>
 		<form>
 			<table>
@@ -15,7 +60,7 @@
 						</detail>
 					</th>
 					<th>
-						<input type="text" name="regNo">
+						<input type="text" class="text-line" name="regNo" required>
 					</th>
 				</tr>
 				<tr>
@@ -25,7 +70,7 @@
 						</detail>
 					</th>
 					<th>
-						<select name="year">
+						<select name="year" required>
 							<option value="first"> 1st </option>
 							<option value="second"> 2nd </option>
 							<option value="third"> 3rd </option>
@@ -41,7 +86,9 @@
 						</detail>
 					</th>
 					<th>
-						
+						<b>1. </b> <input type="text" class="text-line" name="hostel1" required> <br>
+						<b>2. </b><input type="text" class="text-line" name="hostel2"> <br>
+						<b>3. </b><input type="text" class="text-line" name="hostel3"> <br>
 					</th>
 				</tr>
 				<tr>
@@ -51,13 +98,35 @@
 						</detail>
 					</th>
 					<th>
-						
+						<input type="file" id="image " name="image" required="1">
 					</th>
 				</tr>
 			</table>
-			<input type="submit" value="Apply Now"> </input>
+			<input type="submit" class="subButton" value="Apply Now"> </input>
 		</form>
+		<h1> If you have not registered yet to the accomadation devision, please click <a href="studentApp.html"> <i> here </i></a> to register </h1>
 	</center>
+	</div>
 
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="footer-img">
+					<img src="img/logo.png" alt="">
+			</div>
+			<div class="footer-nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="contact.php">Contact</a></li>
+				</ul>
+			</div>
+			<div class="footer-copy">
+				<p> &copy; 2019 Hisni Mohammed. </p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+	
 </body>
 </html>

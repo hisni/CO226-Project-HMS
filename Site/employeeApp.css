@@ -1,0 +1,74 @@
+
+body{
+	background-image: url(bi-background-turquoise-white.png);
+}
+
+legend{
+	font-size: 20px;
+}
+
+h{
+	font-size: 40px;
+	font-style: oblique;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.pDetail{
+	padding-left: 50px;
+	padding-right: 50px;
+	display: block;
+	border: 2px groove (internal value);
+	border-radius: 20px;
+	line-height: 7px;
+	font-size: 18px;
+	width: 70%; 	
+	border-color: #eeeeee;
+}
+
+.text-line{
+	background-color: transparent;
+	color: #eeeeee
+	outline: none;
+	outline-style: none;
+	border: none;
+	border-bottom: solid #eeeeee 1px;
+	padding: 10px ;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.left{
+	float: left;
+	height: 100%;
+	width: 68%;
+	padding-left: 12%;
+}
+
+.right{
+
+	padding-top: 250px;
+	float: right;
+	height: 100%;
+	width: 20%; 
+}
+
+.vacant{
+	background-color: gray;
+	width: 80%;
+}
+
+.vacantData{
+	font-weight: normal;
+}
+
+.heading{
+	font-size: bold;
+	text-decoration: underline; 
+}
+
+td{
+	text-align: left;
+}
+table{
+	width: 100%;
+}

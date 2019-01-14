@@ -5,83 +5,144 @@
 	<link rel="stylesheet" type="text/css" href="employeeApp.css">
 </head>
 <body>
+	<div class="left">
+		<center>
+			<h> Join with our staff! </h>
+		</center>
+
 	<form>
-		<fieldset>
+		<fieldset class="pDetail">
 			<legend>
-				Personel Details
+				 Personel Details 
 			</legend>
 
+			<br><br><br>
 			<detail>First Name : </detail> 
-			<br>
-			<input type="text" name="fName">
-			<br>	
+			<input type="text" class="text-line" name="fName" size="70">
+			<br><br><br><br>	
 					
 			<detail>Last Name : </detail>
-			<br>
-			<input type="text" name="lName">
-			<br>
+			<input type="text" class="text-line" name="lName" size="70">
+			<br><br><br><br>
 
 			<detail>Sex : </detail>
 			<input type="radio" name="sex" value="male"> Male </input>
 			<input type="radio" name="sex" value="female"> Female </input>
-			<br>
+			<br><br><br><br>
 
 			<detail>Date of Birth : </detail>
-			<br>
-			<input type="date" name="dob">
-			<br>
+			<input type="date" class="text-line" name="dob">
+			<br><br><br><br>
 
 			<detail>Home Address : </detail>
-			<br>
-			<input type="text" name="homeAdd">
-			<br>
+			<input type="text" class="text-line" name="homeAdd" size="70">
+			<br><br><br><br>
 
 			<detail>Contact No : </detail>
-			<br>
-			<input type="text" name="contactNo">
-			<br>
+			<input type="text" class="text-line" name="contactNo" size="70">
+			<br><br><br><br>
 
 			<detail>E-mail : </detail>
 			<br>
-			<input type="text" name="mail">
-			<br>
+			<input type="text" class="text-line" name="mail" size="70">
+			<br><br><br><br>
 		</fieldset>
 
-		<fieldset>
+		<br><br><br>
+		<fieldset class="pDetail" >
 			<legend>
 				Qualifications
 			</legend>
+			<br><br><br>
 
 			<detail>Job type : </detail>
 			<br>
-			<input type="text" name="jobType">
-			<br>
+			<input type="text" class="text-line" name="jobType" required>
+			<br><br><br><br>
 
 			<detail>GCE O/L Results : </detail>
 			<br>
-			<input type="text" name="olResult">
-			<br>
+			<input type="text" class="text-line" name="olResult">
+			<br><br><br><br>
 
 			<detail>GCE A/L Results : </detail>
 			<br>
-			<input type="text" name="alResult">
-			<br>
+			<input type="text" class="text-line" name="alResult">
+			<br><br><br><br>
 
 			<detail>Degree : </detail>
 			<br>
-			<input type="text" name="degree">
-			<br>
+			<input type="text" class="text-line" name="degree">
+			<br><br><br><br>
 
 			<detail>If you have any working experiance in this field please mention that here </detail>
-			<br>
+			<br><br><br><br>
 			<textarea name="comment" rows="5" cols="52"> </textarea>
-			<br>
+			<br><br><br><br>
 
 			<detail>Please attache any documents that can proove above given details: </detail>
-			<br>
+			<br><br>
+			<input type="file" id="image "name="image" required="1">
+			<br><br><br><br>
 
 		</fieldset>
 		<input type="submit" value="Apply Now"> </input>
 	</form>
+	</div>
+
+
+	<div class="right">
+		<center>
+			<p> Vacancies </p>
+			<fieldset class="vacant">
+			<table>
+				<tr class="heading">
+					<th>
+						Post
+					</th>
+					<th>
+						No of vacant
+					</th>
+				</tr>
+
+				<tr>
+					<th class="vacantData">
+						Post1
+					</th>
+					<th class="vacantData">
+					
+					</th>
+				</tr>
+
+				<tr>
+					<th class="vacantData">
+						Post2
+					</th>
+					<th class="vacantData">
+						
+					</th class="vacantData">
+				</tr>
+
+				<tr>
+					<th class="vacantData">
+						Post3
+					</th>
+					<th class="vacantData">
+
+					</th>
+				</tr>
+
+				<tr>
+					<th class="vacantData">
+						Post4
+					</th>
+					<th class="vacantData">
+	
+					</th>
+				</tr>
+			</table>
+			</fieldset>
+		</center>
+	</div>
 </body>
 </html>

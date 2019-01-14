@@ -1,0 +1,48 @@
+.text-line{
+	background-color: transparent;
+	color: #000000;
+	outline: none;
+	outline-style: none;
+	border: none;
+	border-bottom: solid #eeeeee 1px;
+	padding: 10px ;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.top{
+	float: top;
+	height: 150px;
+	background-color: #171b26;
+	width: 100%;
+}
+
+fieldset{
+	padding-left: 50px;
+	padding-right: 50px;
+	display: block;
+	border: 2px groove (internal value);
+	border-radius: 20px;
+	line-height: 7px;
+	font-size: 18px; 	
+	border-color: #eeeeee;
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 45%;
+	background-color: #bbb4b4;
+}
+
+.regButton{
+	font-size: 15px;
+	padding: 2px;
+	margin-top: 3px;
+}
+
+form {
+	
+	margin-top: black 10%;
+}
+
+.formst{
+	padding-top: 160px;
+}
