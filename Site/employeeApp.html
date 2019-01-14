@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
-	<link rel="stylesheet" type="text/css" href="employeeApp.css">
+	<link rel="stylesheet" type="text/css" href="css/employeeApp.css">
 
 </head>
 <body>
@@ -61,94 +61,89 @@
 	</header>
 	<!-- Header section end -->
 	
+	<div class="emp">
+		<form class="formemp">
+			<fieldset class="pDetail">
+				<legend>
+					Personel Details 
+				</legend>
 
-	<div class="left">
-		<center>
-			<h> Join with our staff! </h>
-		</center>
+				<br><br><br>
+				<detail>First Name : </detail> 
+				<input type="text" class="text-line" name="fName" size="70">
+				<br><br><br><br>	
+						
+				<detail>Last Name : </detail>
+				<input type="text" class="text-line" name="lName" size="70">
+				<br><br><br><br>
 
-	<form>
-		<fieldset class="pDetail">
-			<legend>
-				 Personel Details 
-			</legend>
+				<detail>Sex : </detail>
+				<input type="radio" name="sex" value="male"> Male </input>
+				<input type="radio" name="sex" value="female"> Female </input>
+				<br><br><br><br>
+
+				<detail>Date of Birth : </detail>
+				<input type="date" class="text-line" name="dob">
+				<br><br><br><br>
+
+				<detail>Home Address : </detail>
+				<input type="text" class="text-line" name="homeAdd" size="70">
+				<br><br><br><br>
+
+				<detail>Contact No : </detail>
+				<input type="text" class="text-line" name="contactNo" size="70">
+				<br><br><br><br>
+
+				<detail>E-mail : </detail>
+				<br>
+				<input type="text" class="text-line" name="mail" size="70">
+				<br><br><br><br>
+			</fieldset>
 
 			<br><br><br>
-			<detail>First Name : </detail> 
-			<input type="text" class="text-line" name="fName" size="70">
-			<br><br><br><br>	
-					
-			<detail>Last Name : </detail>
-			<input type="text" class="text-line" name="lName" size="70">
-			<br><br><br><br>
+			<fieldset class="pDetail" >
+				<legend>
+					Qualifications
+				</legend>
+				<br><br><br>
 
-			<detail>Sex : </detail>
-			<input type="radio" name="sex" value="male"> Male </input>
-			<input type="radio" name="sex" value="female"> Female </input>
-			<br><br><br><br>
+				<detail>Job type : </detail>
+				<br>
+				<input type="text" class="text-line" name="jobType" required>
+				<br><br><br><br>
 
-			<detail>Date of Birth : </detail>
-			<input type="date" class="text-line" name="dob">
-			<br><br><br><br>
+				<detail>GCE O/L Results : </detail>
+				<br>
+				<input type="text" class="text-line" name="olResult">
+				<br><br><br><br>
 
-			<detail>Home Address : </detail>
-			<input type="text" class="text-line" name="homeAdd" size="70">
-			<br><br><br><br>
+				<detail>GCE A/L Results : </detail>
+				<br>
+				<input type="text" class="text-line" name="alResult">
+				<br><br><br><br>
 
-			<detail>Contact No : </detail>
-			<input type="text" class="text-line" name="contactNo" size="70">
-			<br><br><br><br>
+				<detail>Degree : </detail>
+				<br>
+				<input type="text" class="text-line" name="degree">
+				<br><br><br><br>
 
-			<detail>E-mail : </detail>
-			<br>
-			<input type="text" class="text-line" name="mail" size="70">
-			<br><br><br><br>
-		</fieldset>
+				<detail>If you have any working experiance in this field please mention that here </detail>
+				<br><br><br><br>
+				<textarea name="comment" rows="5" cols="52"> </textarea>
+				<br><br><br><br>
 
-		<br><br><br>
-		<fieldset class="pDetail" >
-			<legend>
-				Qualifications
-			</legend>
-			<br><br><br>
+				<detail>Please attache any documents that can proove above given details: </detail>
+				<br><br>
+				<input type="file" id="image "name="image" required="1">
+				<br><br><br><br>
 
-			<detail>Job type : </detail>
-			<br>
-			<input type="text" class="text-line" name="jobType" required>
-			<br><br><br><br>
-
-			<detail>GCE O/L Results : </detail>
-			<br>
-			<input type="text" class="text-line" name="olResult">
-			<br><br><br><br>
-
-			<detail>GCE A/L Results : </detail>
-			<br>
-			<input type="text" class="text-line" name="alResult">
-			<br><br><br><br>
-
-			<detail>Degree : </detail>
-			<br>
-			<input type="text" class="text-line" name="degree">
-			<br><br><br><br>
-
-			<detail>If you have any working experiance in this field please mention that here </detail>
-			<br><br><br><br>
-			<textarea name="comment" rows="5" cols="52"> </textarea>
-			<br><br><br><br>
-
-			<detail>Please attache any documents that can proove above given details: </detail>
-			<br><br>
-			<input type="file" id="image "name="image" required="1">
-			<br><br><br><br>
-
-		</fieldset>
-		<input type="submit" value="Apply Now"> </input>
-	</form>
+			</fieldset>
+			<input type="submit" value="Apply Now"> </input>
+		</form>
 	</div>
 
 
-	<div class="right">
+	<!--div class="right">
 		<center>
 			<p> Vacancies </p>
 			<fieldset class="vacant">
@@ -200,7 +195,27 @@
 			</table>
 			</fieldset>
 		</center>
-	</div>
+	</div--!>
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="footer-img">
+					<img src="img/logo.png" alt="">
+			</div>
+			<div class="footer-nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="contact.php">Contact</a></li>
+				</ul>
+			</div>
+			<div class="footer-copy">
+				<p> &copy; 2019 - University of Peradeniya - Accommodation Division | All rights reserved.  </p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
 	
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>

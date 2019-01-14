@@ -1,16 +1,9 @@
-
-body{
-	background-image: url(bi-background-turquoise-white.png);
+.emp {
+	padding-top: 150px;
 }
 
 legend{
 	font-size: 20px;
-}
-
-h{
-	font-size: 40px;
-	font-style: oblique;
-	font-family: "Times New Roman", Times, serif;
 }
 
 .pDetail{
@@ -38,6 +31,7 @@ h{
 }
 
 .left{
+	padding-top: 130px;
 	float: left;
 	height: 100%;
 	width: 68%;
@@ -45,7 +39,6 @@ h{
 }
 
 .right{
-
 	padding-top: 250px;
 	float: right;
 	height: 100%;
