@@ -10,32 +10,29 @@
 	font-weight: normal;
 }
 
-.top{
-	float: top;
-	height: 150px;
-	background-color: #171b26;
-	width: 100%;
+.formst input[type=text]{
+	width: 88.5%;
+}
+
+.formst input[type=text].text-line.regno{
+	width: 50%;
 }
 
 fieldset{
-	padding-left: 50px;
-	padding-right: 50px;
+	padding-left: 4.5%;
 	display: block;
 	border: 2px groove (internal value);
 	border-radius: 20px;
 	line-height: 7px;
 	font-size: 18px; 	
 	border-color: #eeeeee;
-	margin-left: 25%;
-	margin-right: 25%;
-	width: 45%;
-	background-color: #bbb4b4;
+	margin-left: 27%;
+	width: 46%;
+	background-color: #aab8a6;
 }
 
-.regButton{
-	font-size: 15px;
-	padding: 2px;
-	margin-top: 3px;
+.formst .site-btn.sb-c2{
+	margin-top: 20px;
 }
 
 form {
@@ -44,5 +41,6 @@ form {
 }
 
 .formst{
-	padding-top: 160px;
+	padding-top: 180px;
+	background: rgb(119, 133, 116);
 }
