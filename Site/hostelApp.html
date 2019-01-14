@@ -15,6 +15,10 @@
 </head>
 <body>
 
+	<!-- Page Preloder -->
+	<div id="preloder">
+			<div class="loader"></div>
+	</div>
 
 	<header class="header-section">
 		<div class="container">
@@ -48,65 +52,66 @@
 	</header>
 	<!-- Header section end -->
 
-
-	<div class="bottom">
-	<center>
-		<form>
-			<table>
-				<tr>
-					<th>
-						<detail>
-							Registration No : 
-						</detail>
-					</th>
-					<th>
-						<input type="text" class="text-line" name="regNo" required>
-					</th>
-				</tr>
-				<tr>
-					<th>
-						<detail>
-							Year : 
-						</detail>
-					</th>
-					<th>
-						<select name="year" required>
-							<option value="first"> 1st </option>
-							<option value="second"> 2nd </option>
-							<option value="third"> 3rd </option>
-							<option value="fourth"> 4th </option>
-	   						<option value="fifth"> 5th </option>
-	   					</select>
-					</th>
-				</tr>
-				<tr>
-					<th>
-						<detail>
-							Hostel preferences : 
-						</detail>
-					</th>
-					<th>
-						<b>1. </b> <input type="text" class="text-line" name="hostel1" required> <br>
-						<b>2. </b><input type="text" class="text-line" name="hostel2"> <br>
-						<b>3. </b><input type="text" class="text-line" name="hostel3"> <br>
-					</th>
-				</tr>
-				<tr>
-					<th>
-						<detail>
-							Attach your payment proof here : 
-						</detail>
-					</th>
-					<th>
-						<input type="file" id="image " name="image" required="1">
-					</th>
-				</tr>
-			</table>
-			<input type="submit" class="subButton" value="Apply Now"> </input>
-		</form>
-		<h1> If you have not registered yet to the accomadation devision, please click <a href="studentApp.html"> <i> here </i></a> to register </h1>
-	</center>
-	</div>
+	<section class="tableform">
+		<div class="bottom">
+		<center>
+			<form>
+				<table>
+					<tr>
+						<th>
+							<detail>
+								Registration No : 
+							</detail>
+						</th>
+						<th>
+							<input type="text" class="text-line" name="regNo" required>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<detail>
+								Year : 
+							</detail>
+						</th>
+						<th>
+							<select name="year" required>
+								<option value="first"> 1st </option>
+								<option value="second"> 2nd </option>
+								<option value="third"> 3rd </option>
+								<option value="fourth"> 4th </option>
+								<option value="fifth"> 5th </option>
+							</select>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<detail>
+								Hostel preferences : 
+							</detail>
+						</th>
+						<th>
+							<b>1. </b> <input type="text" class="text-line" name="hostel1" required> <br>
+							<b>2. </b><input type="text" class="text-line" name="hostel2"> <br>
+							<b>3. </b><input type="text" class="text-line" name="hostel3"> <br>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<detail>
+								Attach your payment proof here : 
+							</detail>
+						</th>
+						<th>
+							<input type="file" id="image " name="image" required="1">
+						</th>
+					</tr>
+				</table>
+				<input type="submit" class="subButton" value="Apply Now"> </input>
+			</form>
+			<h1> If you have not registered yet to the accomadation devision, please click <a href="studentApp.html"> <i> here </i></a> to register </h1>
+		</center>
+		</div>
+	</section>
 
 	<!-- Footer section -->
 	<footer class="footer-section">
@@ -122,11 +127,18 @@
 				</ul>
 			</div>
 			<div class="footer-copy">
-				<p> &copy; 2019 Hisni Mohammed. </p>
+				<p> &copy; 2019 - University of Peradeniya - Accommodation Division | All rights reserved.  </p>
 			</div>
 		</div>
 	</footer>
 	<!-- Footer section end -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
 	
 </body>
 </html>

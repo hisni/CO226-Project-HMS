@@ -118,7 +118,7 @@ if(isset($_POST['login']))
 				</ul>
 			</div>
 			<div class="footer-copy">
-				<p> &copy; 2019 Hisni Mohammed. </p>
+				<p> &copy; 2019 - University of Peradeniya - Accommodation Division | All rights reserved.  </p>
 			</div>
 		</div>
 	</footer>

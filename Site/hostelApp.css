@@ -1,80 +1,15 @@
-body{
-	background-image: url("img/blog-backgrounds-24-background-background-and-wallpaper.jpg");
 
-}
-
-form{
-	margin: 50px;
-	padding: 10px;
-	padding-bottom: 10px;
-	margin-bottom: 2px;
+.tableform {
+	padding: 50px 0;
+	background-color: #aab8a6;
 }
 
 detail{
 	font-weight: normal;
 }
 
-.top{
-	float: top;
-	height: 150px;
-	background-color: #171b26;
-	width: 100%;
-}
-
-.foot{
-	float: bottom;
-	height: 75px;
-	background-color: #171b26;
-	width: 100%;
-}
-
 .bottom form{ 
 	padding-top: 130px;
-}
-
-.uniLogo{
-	width: 430px;
-	height: 150px;
-	padding: none;
-	margin: 0px;
-}
-
-.footer-section {
-	height: 130px;
-	background: #171b26;
-	overflow: hidden;
-}
-
-.footer-img img {
-	height: 92px;
-	width: 300px;
-	float: left;
-}
-
-.footer-nav {
-	padding: 30px 0;
-	position: relative;
-	float: right;
-}
-
-.footer-nav ul {
-	list-style: none;
-}
-
-.footer-nav ul li {
-	display: inline;
-}
-
-.footer-nav ul li a {
-	display: inline-block;
-	color: #51555d;
-	margin-left: 35px;
-	font-size: 16px;
-}
-
-.footer-copy{ 
-	text-align: center;
-    clear: both;
 }
 
 table{
@@ -91,13 +26,13 @@ h1{
 
 .text-line{
 	background-color: transparent;
-	color: #eeeeee
+	color: #000000;
 	outline: none;
 	outline-style: none;
 	border: none;
-	border-bottom: solid #eeeeee 1px;
+	border-bottom: solid #615d5d 1px;
 	padding: 10px ;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: normal;
 }
 

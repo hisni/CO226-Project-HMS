@@ -4,7 +4,7 @@
 	outline: none;
 	outline-style: none;
 	border: none;
-	border-bottom: solid #eeeeee 1px;
+	border-bottom: solid #615d5d 1px;
 	padding: 10px ;
 	font-size: 14px;
 	font-weight: normal;
@@ -33,14 +33,31 @@ fieldset{
 
 .formst .site-btn.sb-c2{
 	margin-top: 20px;
+	background-color: #2d2e2d;
 }
 
-form {
-	
-	margin-top: black 10%;
+.formst input[type=submit]:hover,.formst input[type=submit]:active,.formst input[type=submit]:focus {
+	background: rgb(64, 78, 64);
+	color:#000000;
+  }
+
+.formst detail {
+	color: #1f1c1c;
+}
+
+.formst select { 
+	background-color: #b1aaaa;
+	color: #1f1c1c;
 }
 
 .formst{
 	padding-top: 180px;
-	background: rgb(119, 133, 116);
+	background: rgb(135, 139, 134);
+}
+
+.formst .title {
+	padding: 12px 0;
+	color: #1e0c38;
+	font-size: 24px;
+	font-weight: 600;
 }
