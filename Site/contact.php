@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Contact</title>
+	<title>Contact Us</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">

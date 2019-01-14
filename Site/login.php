@@ -40,8 +40,8 @@ if(isset($_POST['login']))
     $ret = mysqli_num_rows($cq);
     if($ret == true)
     {
-        //echo "<script>document.location='profile.php'</script>";
-        echo "<center><h2 style='color:green'>ACCESS GRANTED</h2></center>";
+        echo "<script>document.location='profile.php'</script>";
+        //echo "<center><h2 style='color:green'>ACCESS GRANTED</h2></center>";
     }
     else
     {
@@ -57,7 +57,7 @@ if(isset($_POST['login']))
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>UOP HMS</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">

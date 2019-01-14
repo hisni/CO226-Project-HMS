@@ -599,6 +599,20 @@ ol {
 	background: #c6dabb;
   }
 
+/*------------------
+  Profile Page
+---------------------*/
+
+.main-menu li a.session {
+	color: rgb(255, 255, 255);
+	display: inline-block;
+	font-size: 16px;
+	position: relative;
+	padding: 6px 14px;
+	margin-left: 40px;
+	font-weight: 600;
+}
+
   
 /*------------------
   About Page
