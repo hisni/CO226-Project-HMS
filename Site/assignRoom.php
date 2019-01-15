@@ -4,17 +4,18 @@ session_start();
 //connectivity
 require('config.php');
 
-if($_SESSION['user']=="")
-{
-	header('location:index.php');
-}
-
+	if($_SESSION['user']=="")
+	{
+		header('location:index.php');
+    }
+    
 ?>
+
 
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Admin Profile</title>
+	<title>Employee Details</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +32,7 @@ if($_SESSION['user']=="")
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/w3.css">
 
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -57,7 +59,7 @@ if($_SESSION['user']=="")
 			</div>
 			<div class="header-right">
 				<div class="header-btns">
-					<a href="profile.php" class="session" >Welcome <?php echo $_SESSION['user']; ?></a></li>
+					<a href="profile.php" class="site-btn sb-c3"><?php echo $_SESSION['user']; ?></a>
                     <a href="index.html" class="site-btn sb-c3">Logout</a>
 				</div>
 			</div>
@@ -65,21 +67,10 @@ if($_SESSION['user']=="")
 	</header>
     <!-- Header section end -->
     
-    <section class="profile-body">
-		<div class='row' >
-			<div class="body-btns">
-				<a href="studentDB.php" class="site-btn sb-c4">Students</a>
-				<a href="employeeDB.php" class="site-btn sb-c4">Employees</a>
-				<a href="hostelDB.php" class="site-btn sb-c4">Hostels</a>
-			</div>
-		</div>
-		<div class='row' >
-			<div class="body-btns">
-				<a href="messages.php" class="site-btn sb-c4">Messages</a>
-				<a href="assignRoom.php" class="site-btn sb-c4">Preference</a>
-			</div>
-		</div>
+	<section class="DBbody" >
+            
 	</section>
+
 
 	<!-- Footer section -->
 	<footer class="footer-section">
