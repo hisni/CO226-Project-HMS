@@ -206,7 +206,7 @@ ol {
 	text-align: center;
 	width: 200px;
 	height: 200px;
-	padding-top: 16%;
+    padding-top: 88px;
 	margin: 25px; 
 }
 
@@ -635,12 +635,12 @@ ol {
   Profile Page
 ---------------------*/
 
-.main-menu li a.session {
+.header-right a.session {
 	color: rgb(211, 211, 211);
 	display: inline-block;
 	font-size: 17px;
 	position: relative;
-	margin-left: 80px;
+	margin-left: 1%;
 	font-weight: 400;
 }
 
@@ -648,7 +648,7 @@ ol {
 .profile-body {
 	padding-top: 160px;
 	padding-bottom: 50px;
-	background-color:gray;
+	background-color:rgb(177, 172, 172);
 }
 
 .profile-body .row{
@@ -657,8 +657,27 @@ ol {
 	justify-content: center;
 }
 
+/*------------------
+  DB Pages
+---------------------*/
 
+.DBbody{
+	padding-top: 130px;
+	padding-bottom: 20px;
+	background-color:rgb(177, 172, 172);
+}
 
+.DBbody h3{
+	padding: 25px 0;
+	font-size: 36px;
+	font-weight:600;
+	color:#171b26;
+
+}
+
+.DBbody .w3-container{
+	margin: 0 7% 7% 7%;
+}
   
 /*------------------
   About Page

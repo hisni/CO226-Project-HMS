@@ -4,11 +4,14 @@ session_start();
 //connectivity
 require('config.php');
 
-if($_SESSION['user']=="")
-{
-	header('location:index.php');
-}
+	if($_SESSION['user']==""){
+		header('location:index.php');
+	}
 
+	$q = "SELECT regNum,stdlName,gender FROM students";
+	$cq = mysqli_query($con,$q);
+	$ret = mysqli_num_rows($cq);
+		
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +34,7 @@ if($_SESSION['user']=="")
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/w3.css">
 
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -56,20 +60,45 @@ if($_SESSION['user']=="")
 				<div class="ns-bar"></div>
 			</div>
 			<div class="header-right">
-				<ul class="main-menu">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="profile.php" class="session" >Welcome <?php echo $_SESSION['user']; ?></a></li>
-					
 				</ul>
 				<div class="header-btns">
+					<a href="profile.php" class="site-btn sb-c3"><?php echo $_SESSION['user']; ?></a>
                     <a href="index.html" class="site-btn sb-c3">Logout</a>
 				</div>
 			</div>
 		</div>
 	</header>
-    <!-- Header section end -->
+	<!-- Header section end -->
+	
+	<section class="DBbody" >
+		<div class="w3-container">
+		<h3 align="center">Student Details</h3>
+			<div class="w3-responsive">
+				<table class="w3-table w3-bordered w3-border w3-blue-grey">
+					<tr class="w3-dark-gray"> 
+						<th>Reg Number</th>
+						<th>LastName</th>
+						<th>Gender</th>
+					</tr>
+					<?php
+						if (mysqli_num_rows($cq) > 0) {
+						while( $row = mysqli_fetch_assoc($cq) ) {
+							$regNo = $row["regNum"];
+							$lName = $row["stdlName"];
+							$gen = $row["gender"];
+							print "<tr>	<th> $regNo </th>
+										<th> $lName </th>
+										<th> $gen </th>
+									</tr>";
+							
+							}
+						}
+		
+					?>
+				</table>
+			</div>
+		</div>
+	</section>
     
 
 	<!-- Footer section -->

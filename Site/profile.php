@@ -56,14 +56,8 @@ if($_SESSION['user']=="")
 				<div class="ns-bar"></div>
 			</div>
 			<div class="header-right">
-				<ul class="main-menu">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="profile.php" class="session" >Welcome <?php echo $_SESSION['user']; ?></a></li>
-					
-				</ul>
 				<div class="header-btns">
+					<a href="profile.php" class="session" >Welcome <?php echo $_SESSION['user']; ?></a></li>
                     <a href="index.html" class="site-btn sb-c3">Logout</a>
 				</div>
 			</div>
@@ -75,13 +69,14 @@ if($_SESSION['user']=="")
 		<div class='row' >
 			<div class="body-btns">
 				<a href="studentDB.php" class="site-btn sb-c4">Students</a>
-				<a href="login.php" class="site-btn sb-c4">Employees</a>
+				<a href="employeeDB.php" class="site-btn sb-c4">Employees</a>
+				<a href="hostelDB.php" class="site-btn sb-c4">Hostels</a>
 			</div>
 		</div>
 		<div class='row' >
 			<div class="body-btns">
 				<a href="login.php" class="site-btn sb-c4">Preference</a>
-				<a href="login.php" class="site-btn sb-c4">Hostels</a>
+				<a href="messages.php" class="site-btn sb-c4">Messages</a>
 			</div>
 		</div>
 	</section>

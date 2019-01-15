@@ -1,33 +1,42 @@
 .emp {
-	padding-top: 150px;
+	margin: 180px;
+	margin-left: 26.5%;
+	padding-bottom: 50px;
+	background:#d1aaaa;
+	border: 2px groove (internal value);
+	border-radius: 20px;
+	line-height: 7px;
+	font-size: 18px;
+	width: 50%; 	
+	border-color: #df0a0a; 
 }
 
 legend{
 	font-size: 20px;
 }
 
-.pDetail{
+fieldset{
 	padding-left: 50px;
 	padding-right: 50px;
 	display: block;
 	border: 2px groove (internal value);
 	border-radius: 20px;
-	line-height: 7px;
+	line-height: 14px;
 	font-size: 18px;
-	width: 70%; 	
-	border-color: #eeeeee;
+	width: 100%;
 }
 
 .text-line{
 	background-color: transparent;
-	color: #eeeeee
+	color: #000000;
 	outline: none;
 	outline-style: none;
 	border: none;
-	border-bottom: solid #eeeeee 1px;
+	border-bottom: solid #615d5d 1px;
 	padding: 10px ;
 	font-size: 14px;
 	font-weight: normal;
+	width: 100%
 }
 
 .left{
@@ -64,4 +73,20 @@ td{
 }
 table{
 	width: 100%;
+}
+
+.site-btn1 {
+	display: inline-block;
+	border: none;
+	font-size: 14px;
+	font-weight: 400;
+	color: #fff;
+	min-width: 90px;
+	padding: 8px 16px;
+	border-radius: 0px;
+	background-color: #2d2e2d;
+	cursor: pointer;
+	text-align: center;
+	margin-left: 40%;
+	margin-bottom: 0%;
 }

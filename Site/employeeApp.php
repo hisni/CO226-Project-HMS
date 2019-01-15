@@ -3,7 +3,6 @@
     require('config.php');
 
     if ( isset($_POST['Register']) ){
-
         $fName = $_POST['fName'];
         $lName = $_POST['lName'];
         $sex = $_POST['sex'];
@@ -12,15 +11,15 @@
         $homeAdd = $_POST['homeAdd'];
         $contactNo = $_POST['contactNo'];
         $mail = $_POST['mail'];
-        $faculty = $_POST['faculty'];
-        $regNo = $_POST['regNo'];
-        $enrolData = strtotime($_POST["enrolDate"]);
-        $enrolData = date('Y-m-d H:i:s', $enrolData); 
-            
-        $query = "INSERT INTO students VALUES ( '$regNo', '$fName', '$lName', '$sex', '$dob', '$homeAdd', '$contactNo',  '$mail', '$faculty', '$enrolData', NULL, NULL, NULL )";
+        $jobType = $_POST['jobType'];
+        $workPlace=$_POST['workPlace'];
+
+        //update the database
+        $query = "INSERT INTO employee VALUES ( NULL, '$fName', '$lName', '$sex', '$dob', '$homeAdd', '$contactNo',  '$mail', '$jobType', '$workPlace')";
+        
         mysqli_query($con,$query);
         echo '<script>alert("Details Saved!")</script>';
-        echo "<script>document.location='studentApp.php'</script>";
+        echo "<script>document.location='employeeApp.php'</script>";
     }
 ?>
 
@@ -28,7 +27,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Student Registration Form</title>
+	<title> Employee Registration Form</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,15 +44,15 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
-	<link rel="stylesheet" type="text/css" href="css/studentApp.css">
+	<link rel="stylesheet" type="text/css" href="css/employeeApp.css">
 
 </head>
 <body>
 	<!-- Page Preloder -->
 	<div id="preloder">
-		<div class="loader"></div>
+			<div class="loader"></div>
 	</div>
-
+	
 	<!-- Header section -->
 	<header class="header-section">
 		<div class="container">
@@ -86,89 +85,109 @@
 		</div>
 	</header>
 	<!-- Header section end -->
+	
+	<div class="emp">
+		<form class="formemp" method="POST">
+			<fieldset class="pDetail">
 
-	<div class="formst">
-		<form method="post">
-			<fieldset>
-				<div class="title">
-					Personal Details
-				</div>
-				<br><br><br>
-				<detail>First Name : </detail> 
-				<br>
+				<br><br><br><br>
+				First Name :
 				<input type="text" class="text-line" name="fName" >
-				<br><br><br><br>
-				<detail>Last Name : </detail>
-				<br>
-				<input type="text" class="text-line" name="lName" >
-				<br><br><br><br>
-	
-				<detail>Sex : </detail>
-				<input type="radio" name="sex" value="M"> Male </input>
-				<input type="radio" name="sex" value="F"> Female </input>
-				<br><br><br><br>
-	
-				<detail>Date of Birth : </detail>
-				<input type="date" class="text-line" name="dob">
-				<br><br><br><br>
-	
-				<detail>Home Address : </detail>
-				<br>
-				<input type="text" class="text-line" name="homeAdd">
-				<br><br><br><br>
-	
-				<detail>Contact No : </detail>
-				<br>
-				<input type="text" class="text-line" name="contactNo">
-				<br><br><br><br>
-	
-				<detail>E-mail : </detail>
-				<br>
-				<input type="text" class="text-line" name="mail">
-				<br><br><br><br>
-			</fieldset>
-	
-			<br>
-			<br>
-			<br>
-	
-			<fieldset>
-				<div class="title">
-					University Details
-				</div>
+				<br><br><br>	
+						
+				Last Name : 
+				<input type="text" class="text-line" name="lName">
 				<br><br><br>
-	
-				<detail>Faculty : </detail>
-				<select name="faculty"> 
-					<option value="AHS"> AHS </option>
-					<option value="Agriculture"> Agriculture </option>
-					<option value="Arts"> Arts </option>
-					<option value="Dental"> Dental Sciences </option>
-					   <option value="Engineering"> Engineering </option>
-					   <option value="Management"> Management </option>
-					   <option value="Medicine"> Medicine </option>
-					<option value="Science"> Science </option>
-					   <option value="Vetnery"> Vetnery Sciences </option>
-				</select>
-				<br><br><br><br>
-	
-				<detail>Registerd No : </detail>
-				<br>
-				<input type="text" class="text-line regno" name="regNo" Required/>
-				<br><br><br><br>
-	
-				<detail>Enrolled date : </detail>
-				<input type="date" class="text-line" name="enrolDate">
-				<br><br><br><br>
-			</fieldset>
-			<center>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input class="site-btn sb-c2 " type="submit" name="Register" value="Register"/> 
-			</center>
-			<br><br><br><br>
-		</form>	
+
+				Sex : 
+				<input type="radio" name="sex" value="M"> Male 
+				<input type="radio" name="sex" value="F"> Female 
+				<br><br><br>
+
+				Date of Birth : 
+				<input type="date" class="text-line" name="dob" size="20">
+				<br><br><br>
+
+				Home Address : 
+				<input type="text" class="text-line" name="homeAdd" >
+				<br><br><br>
+
+				Contact No : 
+				<input type="text" class="text-line" name="contactNo"  >
+				<br><br><br>
+
+				E-mail : 
+				<input type="text" class="text-line" name="mail" >
+				<br><br><br>
+
+				Job type : 
+				<input type="text" class="text-line" name="jobType" >
+				<br><br><br>
+
+				Working place : 
+				<input type="text" class="text-line" name="workPlace" >
+				<br><br><br>
+
+                <input  class="site-btn1" type="submit" name="Register" value="Register">
+            </fieldset>   
+		</form>
 	</div>
+
+
+	<!--div class="right">
+		<center>
+			<p> Vacancies </p>
+			<fieldset class="vacant">
+			<table>
+				<tr class="heading">
+					<th>
+						Post
+					</th>
+					<th>
+						No of vacant
+					</th>
+				</tr>
+
+				<tr>
+					<th class="vacantData">
+						Post1
+					</th>
+					<th class="vacantData">
+					
+					</th>
+				</tr>
+
+				<tr>
+					<th class="vacantData">
+						Post2
+					</th>
+					<th class="vacantData">
+						
+					</th class="vacantData">
+				</tr>
+
+				<tr>
+					<th class="vacantData">
+						Post3
+					</th>
+					<th class="vacantData">
+
+					</th>
+				</tr>
+
+				<tr>
+					<th class="vacantData">
+						Post4
+					</th>
+					<th class="vacantData">
 	
+					</th>
+				</tr>
+			</table>
+			</fieldset>
+		</center>
+	</div--!>
+
 	<!-- Footer section -->
 	<footer class="footer-section">
 		<div class="container">
@@ -188,7 +207,7 @@
 		</div>
 	</footer>
 	<!-- Footer section end -->
-
+	
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
