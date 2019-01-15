@@ -62,9 +62,9 @@ if(isset($_POST['applyNow'])){
 					<div class="dropdown">
 						<a href="#" class="site-btn sb-c2">Register</a>
 							<div class="dropdown-content">
-								<a href="studentApp.html">Student</a>
+								<a href="studentApp.php">Student</a>
 								<a href="employeeApp.html">Employee</a>
-								<a href="hostelApp.html">Hostel</a>
+								<a href="hostelApp.php">Hostel</a>
 							</div>
 					</div>
 				</div>
