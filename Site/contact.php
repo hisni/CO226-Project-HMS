@@ -12,7 +12,7 @@ if(isset($_POST['submit']))
 
     $query = "INSERT INTO messages VALUES ('NULL','$name','$email','$subject','$message')";
     mysqli_query($con,$query);
-    echo '<script>alert("Message")</script>';
+    echo '<script>alert("Message sent!")</script>';
 }
 
 ?>

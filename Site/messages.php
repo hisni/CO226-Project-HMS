@@ -4,22 +4,21 @@ session_start();
 //connectivity
 require('config.php');
 
-	if($_SESSION['user']=="")
-	{
-		header('location:index.php');
-	}
+if($_SESSION['user']=="")
+{
+	header('location:index.php');
+}
 
-	$q = "SELECT ssn,empfName,emplName,gender,dob,empContact,empMail,jobType,workPlace FROM employee";
-	$cq = mysqli_query($con,$q);
-	$ret = mysqli_num_rows($cq);
-
+		$q = "SELECT * FROM messages";
+		$cq = mysqli_query($con,$q);
+		$ret = mysqli_num_rows($cq);
+		
 ?>
-
 
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Employee Details</title>
+	<title>Messages</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +36,7 @@ require('config.php');
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
 	<link rel="stylesheet" href="css/w3.css">
+
 
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -69,47 +69,31 @@ require('config.php');
 			</div>
 		</div>
 	</header>
-    <!-- Header section end -->
-    
+	<!-- Header section end -->
+
 	<section class="DBbody" >
 		<div class="w3-container">
-		<h3 align="center">Employee Details</h3>
+			<h3 align="center" >Hostel Capacity</h3>
 			<div class="w3-responsive">
 				<table class="w3-table w3-bordered w3-border w3-blue-grey">
 					<tr class="w3-dark-gray"> 
-						<th>SSN</th>
-						<th>FirstName</th>
-						<th>LastName</th>
-						<th>Gender</th>
-						<th>DOB</th>
-						<th>ContactNo</th>
+						<th>Name</th>
 						<th>Email</th>
-						<th>JobType</th>
-						<th>WorkPlace</th>
+						<th>Subject</th>
+						<th>Message</th>
 					</tr>
 					<?php
 						if (mysqli_num_rows($cq) > 0) {
-						while( $row = mysqli_fetch_assoc($cq) ) {
-							$ssn = $row["ssn"];
-							$empfName = $row["empfName"];
-							$emplName = $row["emplName"];
-							$gender = $row["gender"];
-							$dob = $row["dob"];
-							$empContact = $row["empContact"];
-							$empMail = $row["empMail"];
-							$jobType = $row["jobType"];
-							$workPlace = $row["workPlace"];
-							
-							print "<tr w3-centered>	<th> $ssn </th>
-										<th> $empfName </th>
-										<th> $emplName </th>
-										<th> $gender </th>
-										<th> $dob </th>
-										<th> $empContact </th>
-										<th> $empMail </th>
-										<th> $jobType </th>
-										<th> $workPlace </th>
-									</tr>";
+							while( $row = mysqli_fetch_assoc($cq) ) {
+								$Name = $row["Name"];
+								$Email = $row["Email"];
+								$Subject = $row["Subject"];
+								$Message = $row["Message"];
+								print "<tr w3-centered>	<th> $Name </th>
+											<th> $Email </th>
+											<th> $Subject </th>
+											<th> $Message </th>
+										</tr>";
 							}
 						}
 		
@@ -118,7 +102,6 @@ require('config.php');
 			</div>
 		</div>
 	</section>
-
 
 	<!-- Footer section -->
 	<footer class="footer-section">

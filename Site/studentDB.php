@@ -8,7 +8,7 @@ require('config.php');
 		header('location:index.php');
 	}
 
-	$q = "SELECT regNum,stdlName,gender FROM students";
+	$q = "SELECT regNum, stdfName, stdlName, gender, dob, stdConNum, faculty, hostelName, roomNum FROM students";
 	$cq = mysqli_query($con,$q);
 	$ret = mysqli_num_rows($cq);
 		
@@ -77,18 +77,37 @@ require('config.php');
 				<table class="w3-table w3-bordered w3-border w3-blue-grey">
 					<tr class="w3-dark-gray"> 
 						<th>Reg Number</th>
+						<th>FirstName</th>
 						<th>LastName</th>
 						<th>Gender</th>
+						<th>DOB</th>
+						<th>ContactNo</th>
+						<th>Faculty</th>
+						<th>Hostel</th>
+						<th>RoomNo</th>
 					</tr>
 					<?php
 						if (mysqli_num_rows($cq) > 0) {
 						while( $row = mysqli_fetch_assoc($cq) ) {
-							$regNo = $row["regNum"];
-							$lName = $row["stdlName"];
-							$gen = $row["gender"];
-							print "<tr>	<th> $regNo </th>
-										<th> $lName </th>
-										<th> $gen </th>
+							$regNum = $row["regNum"];
+							$stdfName = $row["stdfName"];
+							$stdlName = $row["stdlName"];
+							$gender = $row["gender"];
+							$dob = $row["dob"];
+							$stdConNum = $row["stdConNum"];
+							$faculty = $row["faculty"];
+							$hostelName = $row["hostelName"];
+							$roomNum = $row["roomNum"];
+							
+							print "<tr w3-centered>	<th> $regNum </th>
+										<th> $stdfName </th>
+										<th> $stdlName </th>
+										<th> $gender </th>
+										<th> $dob </th>
+										<th> $stdConNum </th>
+										<th> $faculty </th>
+										<th> $hostelName </th>
+										<th> $roomNum </th>
 									</tr>";
 							
 							}

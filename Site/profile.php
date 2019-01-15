@@ -75,7 +75,7 @@ if($_SESSION['user']=="")
 		</div>
 		<div class='row' >
 			<div class="body-btns">
-				<a href="login.php" class="site-btn sb-c4">Preference</a>
+				<a href="prefernce.php" class="site-btn sb-c4">Preference</a>
 				<a href="messages.php" class="site-btn sb-c4">Messages</a>
 			</div>
 		</div>

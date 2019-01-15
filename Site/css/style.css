@@ -844,7 +844,8 @@ font-family: "Roboto", sans-serif;
 	}
 	.header-section .header-right {
 		position: fixed;
-		background: #fff;
+		background: rgb(207, 207, 207);
+		padding-top: 15px;
 		width: 300px;
 		height: 100%;
 		left: -340px;
@@ -853,6 +854,7 @@ font-family: "Roboto", sans-serif;
 		box-shadow: 40px 0px 70px rgba(167, 167, 167, 0.2);
 		transition: all 0.4s;
 	}
+	
 	.header-section .header-right.active {
 		left: 0;
 	}
@@ -940,6 +942,10 @@ font-family: "Roboto", sans-serif;
 	.hs-item h2 {
 		font-size: 65px;
 	}
+
+	.header-right a.session {
+		color: rgb(90, 89, 89);
+	}
 }
 
 /* Large Mobile :480px. */
@@ -950,7 +956,8 @@ font-family: "Roboto", sans-serif;
 	}
 	.header-section .header-right {
 		position: fixed;
-		background: #fff;
+		padding-top: 15px;
+		background: rgb(207, 207, 207);
 		width: 300px;
 		height: 100%;
 		left: -340px;
@@ -1055,6 +1062,10 @@ font-family: "Roboto", sans-serif;
 	}
 	.footer-img {
 		padding-top: 15px;
+	}
+
+	.header-right a.session {
+		color: rgb(90, 89, 89);
 	}
 
 }
