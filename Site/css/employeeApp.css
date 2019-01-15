@@ -2,18 +2,20 @@
 	margin: 180px;
 	margin-left: 26.5%;
 	padding-bottom: 50px;
-	background:#d1aaaa;
+	background: rgb(135, 139, 134);
 	border: 2px groove (internal value);
 	border-radius: 20px;
 	line-height: 7px;
 	font-size: 18px;
 	width: 50%; 	
-	border-color: #df0a0a; 
+	border-color: rgb(135, 139, 134);
 }
+
 
 legend{
 	font-size: 20px;
 }
+
 
 fieldset{
 	padding-left: 50px;

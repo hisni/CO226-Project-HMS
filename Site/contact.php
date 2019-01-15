@@ -70,7 +70,13 @@ if(isset($_POST['submit']))
 					
 				</ul>
 				<div class="header-btns">
-					<a href="login.php" class="site-btn sb-c1">Login</a>
+					<div class="dropdown">
+						<a href="#" class="site-btn sb-c1">Login</a>
+							<div class="dropdown-content">
+								<a href="stlogin.php">Student</a>
+								<a href="login.php">Admin</a>
+							</div>
+					</div>
 					<div class="dropdown">
 						<a href="#" class="site-btn sb-c2">Register</a>
 							<div class="dropdown-content">
@@ -113,7 +119,7 @@ if(isset($_POST['submit']))
 						<div class="ci-icon">
 							<img src="img/contact-icons/2.png" alt="">
 						</div>
-						<h6>203-808-8613</h6>
+						<h6>081-225-1234</h6>
 					</div>
 					<div class="contact-info">
 						<div class="ci-icon">

@@ -6,7 +6,7 @@ require('config.php');
 
 if($_SESSION['user']=="")
 {
-	header('location:index.php');
+	header('location:index.html');
 }
 
 ?>
@@ -75,8 +75,8 @@ if($_SESSION['user']=="")
 		</div>
 		<div class='row' >
 			<div class="body-btns">
-				<a href="messages.php" class="site-btn sb-c4">Messages</a>
-				<a href="assignRoom.php" class="site-btn sb-c4">Preference</a>
+				<a href="messagesDB.php" class="site-btn sb-c4">Messages</a>
+				<a href="assignRoom.php" class="site-btn sb-c4">Assing Rooms</a>
 			</div>
 		</div>
 	</section>

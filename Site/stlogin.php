@@ -7,9 +7,9 @@ if(isset($_POST['create']))
     $n = $_POST['Name'];
 	$passc = $_POST['PW'];
 	$pc = md5($passc);        //encrypt pass
-    $em = $_POST['Email'];
+    $reg = $_POST['Reg'];
     
-    $q = "SELECT username FROM admins WHERE username='$n'";
+    $q = "SELECT username FROM studentprofiles WHERE username='$n'";
     $cq = mysqli_query($con,$q);
     $ret = mysqli_num_rows($cq);
     if($ret == true)
@@ -18,7 +18,7 @@ if(isset($_POST['create']))
 	}
     else
     {
-        $query = "INSERT INTO admins VALUES ('$n','$pc','$em')";
+        $query = "INSERT INTO studentprofiles VALUES ('$n','$reg','$pc')";
 		mysqli_query($con,$query);
 		echo '<script>alert("Details Saved!")</script>';
     }
@@ -36,12 +36,12 @@ if(isset($_POST['login']))
 	$_SESSION['user']=$u;
 	$_SESSION['pass']=$p;
     //user check
-    $q = "SELECT * FROM admins WHERE username='$u' AND password='$p'";
+    $q = "SELECT * FROM studentprofiles WHERE username='$u' AND password='$p'";
     $cq = mysqli_query($con,$q);
     $ret = mysqli_num_rows($cq);
     if($ret == true)
     {
-        echo "<script>document.location='profile.php'</script>";
+        echo "<script>document.location='stprofile.php'</script>";
         //echo "<center><h2 style='color:green'>ACCESS GRANTED</h2></center>";
     }
     else
@@ -58,7 +58,7 @@ if(isset($_POST['login']))
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Admin Login</title>
+	<title>Student Login</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +90,7 @@ if(isset($_POST['login']))
                 <form class="register-form" method="post">
                     <input type="text" name="Name" placeholder="name"/>
                     <input type="password" name="PW" placeholder="password"/>
-					<input type="text" name="Email" placeholder="email address"/>
+					<input type="text" name="Reg" placeholder="Registration Number"/>
 					<input type="submit" value="Create" name="create"/>
                     <p class="message">Already registered? <a href="#">Sign In</a></p>
                 </form>

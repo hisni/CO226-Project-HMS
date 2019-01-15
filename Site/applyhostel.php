@@ -1,22 +1,13 @@
 <?php 
 
-//connectivity
-require('config.php');
+    session_start();
+    //connectivity
+    require('config.php');
 
-if(isset($_POST['applyNow'])){
-	$rn = $_POST['regNo'];
-	$yr = $_POST['year'];
-	$h1 = $_POST['hostel1'];
-	$h2 = $_POST['hostel2'];
-	$h3 = $_POST['hostel3'];
-	$im = $_POST['image'];
-	
-    $query = "INSERT INTO hostelreg VALUES('$rn','$yr','$h1','$h2','$h3','$im')";
-    mysqli_query($con,$query);
-    echo '<script>alert("Details Saved!")</script>';
-    echo "<script>document.location='hostelApp.php'</script>";
-}
-
+	if($_SESSION['user']=="")
+	{
+		header('location:index.html');
+	}
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +32,7 @@ if(isset($_POST['applyNow'])){
 			<div class="loader"></div>
 	</div>
 
+	<!-- Header section -->
 	<header class="header-section">
 		<div class="container">
 			<a href="index.html" class="site-logo">
@@ -51,28 +43,10 @@ if(isset($_POST['applyNow'])){
 				<div class="ns-bar"></div>
 			</div>
 			<div class="header-right">
-				<ul class="main-menu">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li><a href="contact.php">Contact</a></li>
-					
 				</ul>
 				<div class="header-btns">
-				<div class="dropdown">
-					<a href="#" class="site-btn sb-c1">Login</a>
-						<div class="dropdown-content">
-							<a href="stlogin.php">Student</a>
-							<a href="login.php">Admin</a>
-						</div>
-					</div>
-					<div class="dropdown">
-						<a href="#" class="site-btn sb-c2">Register</a>
-							<div class="dropdown-content">
-								<a href="studentApp.php">Student</a>
-								<a href="employeeApp.php">Employee</a>
-								<a href="hostelApp.php">Hostel</a>
-							</div>
-					</div>
+					<a href="stprofile.php" class="site-btn sb-c3"><?php echo $_SESSION['user']; ?></a>
+                    <a href="index.html" class="site-btn sb-c3">Logout</a>
 				</div>
 			</div>
 		</div>
@@ -136,11 +110,26 @@ if(isset($_POST['applyNow'])){
                     </table>
                     <input type="submit" class="site-btn1" value="Apply Now" name="applyNow"> </input>
                 </form>
-                <h1> If you have not registered yet to the accomadation devision, please click <a href="studentApp.html"> <i> here </i></a> to register </h1>
             </center>
         </div>
 		</fieldset>
-	</section>
+    </section>
+    
+    <?php 
+        if(isset($_POST['applyNow'])){
+            $rn = $_POST['regNo'];
+            $yr = $_POST['year'];
+            $h1 = $_POST['hostel1'];
+            $h2 = $_POST['hostel2'];
+            $h3 = $_POST['hostel3'];
+            $im = $_POST['image'];
+            
+            $query = "INSERT INTO hostelreg VALUES('$rn','$yr','$h1','$h2','$h3','$im')";
+            mysqli_query($con,$query);
+            echo '<script>alert("Details Saved!")</script>';
+            echo "<script>document.location='stprofile.php'</script>";
+        }
+    ?>
 
 	<!-- Footer section -->
 	<footer class="footer-section">

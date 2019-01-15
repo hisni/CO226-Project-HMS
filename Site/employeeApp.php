@@ -43,7 +43,7 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
-	<link rel="stylesheet" type="text/css" href="css/employeeApp.css">
+	<link rel="stylesheet" href="css/employeeApp.css">
 
 </head>
 <body>
@@ -70,7 +70,13 @@
 					
 				</ul>
 				<div class="header-btns">
-					<a href="login.php" class="site-btn sb-c1">Login</a>
+					<div class="dropdown">
+						<a href="#" class="site-btn sb-c1">Login</a>
+							<div class="dropdown-content">
+								<a href="stlogin.php">Student</a>
+								<a href="login.php">Admin</a>
+							</div>
+					</div>
 					<div class="dropdown">
 						<a href="#" class="site-btn sb-c2">Register</a>
 							<div class="dropdown-content">

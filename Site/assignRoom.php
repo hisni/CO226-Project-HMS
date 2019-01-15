@@ -6,9 +6,9 @@ require('config.php');
 
 	if($_SESSION['user']=="")
 	{
-		header('location:index.php');
-    }
-    
+		header('location:index.html');
+	}
+
 ?>
 
 
@@ -66,9 +66,52 @@ require('config.php');
 		</div>
 	</header>
     <!-- Header section end -->
-    
-	<section class="DBbody" >
-            
+	
+	
+	<section class="sectionDB" >
+		<h3 align="center" >Assign Hostel Rooms</h3>
+		<div class="DBbody room">
+			<form method="POST" class="fstform">
+				<select name="RegNo">
+					<?php
+						
+						$sql = mysqli_query($con, "SELECT regNum FROM students WHERE roomNum IS NULL");
+						while ($row = $sql->fetch_assoc()){
+							echo "<option value=". $row['regNum'] .">" . $row['regNum'] . "</option>";
+						}
+					?>
+				</select>
+					<input  class="site-btn1" type="submit" name="sel" value="select">
+			</form>
+			
+			<?php
+				echo "<form action=\"update.php\" method=".'POST'.">";
+
+				if ( isset($_POST['sel']) ){
+					$reg = $_POST['RegNo'];
+					$_SESSION['reg'] = $reg;
+					$sql = mysqli_query($con, "SELECT * FROM hostelreg WHERE RegNum = 'E/17/100'");
+					echo "<br><br>";
+					
+					echo "<select name=".'hostel'.">";
+					while ( $row = $sql->fetch_assoc() ){
+
+						echo "<option value=". $row['hostel1'] .">" . $row['hostel1'] . "</option>";
+						echo "<option value=". $row['hostel2'] .">" . $row['hostel2'] . "</option>";
+						echo "<option value=". $row['hostel3'] .">" . $row['hostel3'] . "</option>";
+					}
+					echo "</select>";
+					echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+					echo "Assign Room No:";
+					echo "<input type=".'text'." class=".'text-line'." name=".'rmNo'." >";
+					echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+					echo "<input  class=".'site-btn1'." type=".'submit'." name=".'allocate'." value=".'Confirm'.">";
+					echo "</div>";
+					
+				}  
+				echo "</form>";    
+			?>
+		</div>
 	</section>
 
 

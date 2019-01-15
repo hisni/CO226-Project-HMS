@@ -4,21 +4,26 @@ session_start();
 //connectivity
 require('config.php');
 
-if($_SESSION['user']=="")
-{
-	header('location:index.php');
-}
+	if($_SESSION['user']==""){
+		header('location:index.html');
+	}
 
-		$q = "SELECT * FROM messages";
-		$cq = mysqli_query($con,$q);
-		$ret = mysqli_num_rows($cq);
+    $name = $_SESSION['user'];
+    $q = "SELECT RegNum FROM studentprofiles WHERE username='$name'";
+    $cq = mysqli_query($con,$q);
+    $row = mysqli_fetch_assoc($cq);
+    
+    $reg = $row["RegNum"];
+    $q = "SELECT regNum,hostelName,roomNum FROM students WHERE regNum='$reg' ";
+	$cq = mysqli_query($con,$q);
+	$ret = mysqli_num_rows($cq);
 		
 ?>
 
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Messages</title>
+	<title>Students Details</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +41,6 @@ if($_SESSION['user']=="")
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
 	<link rel="stylesheet" href="css/w3.css">
-
 
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -62,45 +66,38 @@ if($_SESSION['user']=="")
 				<div class="ns-bar"></div>
 			</div>
 			<div class="header-right">
+				</ul>
 				<div class="header-btns">
-					<a href="profile.php" class="site-btn sb-c3"><?php echo $_SESSION['user']; ?></a>
+					<a href="stprofile.php" class="site-btn sb-c3"><?php echo $_SESSION['user']; ?></a>
                     <a href="index.html" class="site-btn sb-c3">Logout</a>
 				</div>
 			</div>
 		</div>
 	</header>
 	<!-- Header section end -->
-
+    
+    
 	<section class="DBbody" >
-		<div class="w3-container">
-			<h3 align="center" >Hostel Capacity</h3>
-			<div class="w3-responsive">
-				<table class="w3-table w3-bordered w3-border w3-blue-grey">
-					<tr class="w3-dark-gray"> 
-						<th>Name</th>
-						<th>Email</th>
-						<th>Subject</th>
-						<th>Message</th>
-					</tr>
-					<?php
-						if (mysqli_num_rows($cq) > 0) {
-							while( $row = mysqli_fetch_assoc($cq) ) {
-								$Name = $row["Name"];
-								$Email = $row["Email"];
-								$Subject = $row["Subject"];
-								$Message = $row["Message"];
-								print "<tr w3-centered>	<th> $Name </th>
-											<th> $Email </th>
-											<th> $Subject </th>
-											<th> $Message </th>
-										</tr>";
-							}
-						}
-		
-					?>
-				</table>
-			</div>
-		</div>
+        <h3 align="center">Student Details</h3>
+        <div class="stdetails">
+            <?php
+                if (mysqli_num_rows($cq) > 0) {
+                while( $row = mysqli_fetch_assoc($cq) ) {
+
+                    $regNum = $row["regNum"];
+                    $hostel = $row["hostelName"];
+                    $room = $row["roomNum"];
+
+                    print "<div>
+                            <p>Register No: $regNum</p>
+                            <p>Hostel : $hostel</p>
+                            <p>Room No : $room</p>
+                    </div>";
+                    
+                    }
+                }
+            ?>
+        </div>
 	</section>
 
 	<!-- Footer section -->

@@ -6,7 +6,7 @@ require('config.php');
 
 	if($_SESSION['user']=="")
 	{
-		header('location:index.php');
+		header('location:index.html');
 	}
 
 	$q = "SELECT ssn,empfName,emplName,gender,dob,empContact,empMail,jobType,workPlace FROM employee";

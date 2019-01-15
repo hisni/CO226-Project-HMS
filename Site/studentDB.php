@@ -5,7 +5,7 @@ session_start();
 require('config.php');
 
 	if($_SESSION['user']==""){
-		header('location:index.php');
+		header('location:index.html');
 	}
 
 	$q = "SELECT regNum, stdfName, stdlName, gender, dob, stdConNum, faculty, hostelName, roomNum FROM students";

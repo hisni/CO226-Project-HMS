@@ -9,7 +9,7 @@ if($_SESSION['user']=="")
 	header('location:index.html');
 }
 
-		$q = "SELECT hstlName,bikku,male,female FROM hostels";
+		$q = "SELECT * FROM messages";
 		$cq = mysqli_query($con,$q);
 		$ret = mysqli_num_rows($cq);
 		
@@ -18,7 +18,7 @@ if($_SESSION['user']=="")
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Hostels Details</title>
+	<title>Messages</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,22 +77,22 @@ if($_SESSION['user']=="")
 			<div class="w3-responsive">
 				<table class="w3-table w3-bordered w3-border w3-blue-grey">
 					<tr class="w3-dark-gray"> 
-						<th>Hostel Name</th>
-						<th>Bikku</th>
-						<th>Male</th>
-						<th>Female</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Subject</th>
+						<th>Message</th>
 					</tr>
 					<?php
 						if (mysqli_num_rows($cq) > 0) {
 							while( $row = mysqli_fetch_assoc($cq) ) {
-								$hstlName = $row["hstlName"];
-								$bikku = $row["bikku"];
-								$male = $row["male"];
-								$female = $row["female"];
-								print "<tr w3-centered>	<th> $hstlName </th>
-											<th> $bikku </th>
-											<th> $male </th>
-											<th> $female </th>
+								$Name = $row["Name"];
+								$Email = $row["Email"];
+								$Subject = $row["Subject"];
+								$Message = $row["Message"];
+								print "<tr w3-centered>	<th> $Name </th>
+											<th> $Email </th>
+											<th> $Subject </th>
+											<th> $Message </th>
 										</tr>";
 							}
 						}
