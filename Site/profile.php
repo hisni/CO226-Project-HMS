@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 //connectivity
 require('config.php');
@@ -59,25 +60,28 @@ if($_SESSION['user']=="")
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About us</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                    <li><a class="session" >Welcome <?php echo $_SESSION['user']; ?></a></li>
+                    <li><a href="profile.php" class="session" >Welcome <?php echo $_SESSION['user']; ?></a></li>
 					
 				</ul>
 				<div class="header-btns">
-                    <a href="login.php" class="site-btn sb-c1">Logout</a>
+                    <a href="index.html" class="site-btn sb-c3">Logout</a>
 				</div>
 			</div>
 		</div>
 	</header>
     <!-- Header section end -->
     
-    <section class="hero-section">
-		<div class="hero-slider owl-carousel">
-			<div class="hs-item set-bg" data-setbg="img/bg.jpg">
-				<div class="container">
-					<h2>Hostel Management</h2>
-					<h2>System</h2>
-					<div class="clearfix"></div>
-				</div>
+    <section class="profile-body">
+		<div class='row' >
+			<div class="body-btns">
+				<a href="studentDB.php" class="site-btn sb-c4">Students</a>
+				<a href="login.php" class="site-btn sb-c4">Employees</a>
+			</div>
+		</div>
+		<div class='row' >
+			<div class="body-btns">
+				<a href="login.php" class="site-btn sb-c4">Preference</a>
+				<a href="login.php" class="site-btn sb-c4">Hostels</a>
 			</div>
 		</div>
 	</section>
@@ -101,7 +105,6 @@ if($_SESSION['user']=="")
 		</div>
 	</footer>
 	<!-- Footer section end -->
-
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>

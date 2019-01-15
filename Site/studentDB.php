@@ -1,7 +1,20 @@
+<?php
+
+session_start();
+//connectivity
+require('config.php');
+
+if($_SESSION['user']=="")
+{
+	header('location:index.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>UOP HMS</title>
+	<title>Students Details</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,41 +57,21 @@
 			</div>
 			<div class="header-right">
 				<ul class="main-menu">
-					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About us</a></li>
-					<li><a href="contact.php">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="profile.php" class="session" >Welcome <?php echo $_SESSION['user']; ?></a></li>
 					
 				</ul>
 				<div class="header-btns">
-					<a href="login.php" class="site-btn sb-c1">Login</a>
-					<div class="dropdown">
-						<a href="#" class="site-btn sb-c2">Register</a>
-							<div class="dropdown-content">
-								<a href="studentApp.html">Student</a>
-								<a href="employeeApp.html">Employee</a>
-								<a href="hostelApp.html">Hostel</a>
-							</div>
-					</div>
+                    <a href="index.html" class="site-btn sb-c3">Logout</a>
 				</div>
 			</div>
 		</div>
 	</header>
-	<!-- Header section end -->
+    <!-- Header section end -->
+    
 
-	<!-- Hero section -->
-	<section class="hero-section">
-		<div class="hero-slider owl-carousel">
-			<div class="hs-item set-bg" data-setbg="img/bg.jpg">
-				<div class="container">
-					<h2>Hostel Management</h2>
-					<h2>System</h2>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Hero section end -->
-	
 	<!-- Footer section -->
 	<footer class="footer-section">
 		<div class="container">
@@ -98,7 +91,6 @@
 		</div>
 	</footer>
 	<!-- Footer section end -->
-
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>

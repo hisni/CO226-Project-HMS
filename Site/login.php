@@ -1,5 +1,4 @@
 <?php
-
 //connectivity
 require('config.php');
 
@@ -29,6 +28,8 @@ if(isset($_POST['create']))
 
 if(isset($_POST['login']))
 {
+	session_start();
+		
 	$u = $_POST['User'];
 	$pass = $_POST['Pass'];
 	$p = md5($pass);
