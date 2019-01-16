@@ -90,23 +90,31 @@ require('config.php');
 				if ( isset($_POST['sel']) ){
 					$reg = $_POST['RegNo'];
 					$_SESSION['reg'] = $reg;
-					$sql = mysqli_query($con, "SELECT * FROM hostelreg WHERE RegNum = 'E/17/100'");
-					echo "<br><br>";
 					
-					echo "<select name=".'hostel'.">";
-					while ( $row = $sql->fetch_assoc() ){
+					$q = "SELECT * FROM hostelreg WHERE RegNum = '$reg'";
+					$sql = mysqli_query($con, $q);
+					$ret = mysqli_num_rows($sql);
+					echo "<br><br>";
+					echo "<p class=".'regNO'.">$reg</p>";
+					if( $ret > 0){
+						echo "<select name=".'hostel'.">";
+						while ( $row = $sql->fetch_assoc() ){
 
-						echo "<option value=". $row['hostel1'] .">" . $row['hostel1'] . "</option>";
-						echo "<option value=". $row['hostel2'] .">" . $row['hostel2'] . "</option>";
-						echo "<option value=". $row['hostel3'] .">" . $row['hostel3'] . "</option>";
+							echo "<option value=". $row['hostel1'] .">" . $row['hostel1'] . "</option>";
+							echo "<option value=". $row['hostel2'] .">" . $row['hostel2'] . "</option>";
+							echo "<option value=". $row['hostel3'] .">" . $row['hostel3'] . "</option>";
+						}
+						echo "</select>";
+						echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+						echo "Assign Room No:";
+						echo "<input type=".'text'." class=".'text-line'." name=".'rmNo'." >";
+						echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+						echo "<input  class=".'site-btn1'." type=".'submit'." name=".'allocate'." value=".'Confirm'.">";
+						echo "</div>";
 					}
-					echo "</select>";
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-					echo "Assign Room No:";
-					echo "<input type=".'text'." class=".'text-line'." name=".'rmNo'." >";
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-					echo "<input  class=".'site-btn1'." type=".'submit'." name=".'allocate'." value=".'Confirm'.">";
-					echo "</div>";
+					else{
+						echo "<p>*Hostel Preference Form not Filled</p>";
+					}
 					
 				}  
 				echo "</form>";    

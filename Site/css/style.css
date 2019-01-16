@@ -712,11 +712,43 @@ ol {
 	padding-bottom: 5%;
 }
 
-.sectionDB h3{
+
+.sectionDB p{
+	padding-left: 13%;
+	color: #151414;
+	font-weight: 600;
+}
+
+.sectionDB p.regNO{
+	padding-left: 24%;
+	color: #151414;
+	font-weight: 600;
+}
+
+.sectionDB h3, .sectionAP h3{
 	font-size: 36px;
 	font-weight:600;
 	color:#171b26;
+}
 
+.sectionAP {
+	padding-top: 130px;
+	padding-bottom: 20px;
+	background-color:rgb(177, 172, 172);
+	min-height: 508px;
+}
+
+.sectionAP .w3-container{
+	margin: 0 7% 7% 7%;
+}
+.sectionAP .w3-responsive{
+	margin: 5% 0 0 0;
+}
+
+.sectionAP .frm{
+	text-align: center;
+	margin-top: 5%;
+	
 }
 
 .row-el1{

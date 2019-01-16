@@ -18,7 +18,7 @@ if(isset($_POST['create']))
 	}
     else
     {
-        $query = "INSERT INTO admins VALUES ('$n','$pc','$em')";
+        $query = "INSERT INTO adminsTemp VALUES ('$n','$pc','$em')";
 		mysqli_query($con,$query);
 		echo '<script>alert("Details Saved!")</script>';
     }

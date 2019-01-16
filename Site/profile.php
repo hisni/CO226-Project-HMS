@@ -77,6 +77,7 @@ if($_SESSION['user']=="")
 			<div class="body-btns">
 				<a href="messagesDB.php" class="site-btn sb-c4">Messages</a>
 				<a href="assignRoom.php" class="site-btn sb-c4">Assing Rooms</a>
+				<a href="approveAdmin.php" class="site-btn sb-c4">Approve Admins</a>
 			</div>
 		</div>
 	</section>

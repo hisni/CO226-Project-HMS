@@ -9,16 +9,17 @@ if($_SESSION['user']=="")
 	header('location:index.html');
 }
 
-		$q = "SELECT hstlName,bikku,male,female FROM hostels";
+		$q = "SELECT * FROM adminsTemp";
 		$cq = mysqli_query($con,$q);
 		$ret = mysqli_num_rows($cq);
 		
 ?>
 
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Hostels Details</title>
+	<title>Messages</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,37 +72,75 @@ if($_SESSION['user']=="")
 	</header>
 	<!-- Header section end -->
 
-	<section class="DBbody" >
+	<section class="sectionAP">
 		<div class="w3-container">
-			<h3 align="center" >Hostel Details</h3>
+			<h3 align="center" >Approve new Admins</h3>
+
 			<div class="w3-responsive">
-				<table class="w3-table w3-bordered w3-border w3-blue-grey">
-					<tr class="w3-dark-gray"> 
-						<th>Hostel Name</th>
-						<th>Bikku</th>
-						<th>Male</th>
-						<th>Female</th>
-					</tr>
-					<?php
-						if (mysqli_num_rows($cq) > 0) {
+					<table class="w3-table w3-bordered w3-border w3-blue-grey">
+						<tr class="w3-dark-gray"> 
+							<th>User Name</th>
+							<th>E-mail Address</th>
+						</tr>
+						<?php
+							if (mysqli_num_rows($cq) > 0) {
 							while( $row = mysqli_fetch_assoc($cq) ) {
-								$hstlName = $row["hstlName"];
-								$bikku = $row["bikku"];
-								$male = $row["male"];
-								$female = $row["female"];
-								print "<tr w3-centered>	<th> $hstlName </th>
-											<th> $bikku </th>
-											<th> $male </th>
-											<th> $female </th>
+								$user = $row["userName"];
+								//$stdfName = $row["passWord"];
+								$email = $row["email"];
+								
+								print "<tr w3-centered>
+											<th> $user </th>
+											<th> $email </th>
 										</tr>";
+								}
+							}
+			
+						?>
+					</table>
+				</div>
+				
+				<div class="frm">
+					<form method="POST">
+						<h4> Enter new admin's name: </h4>
+						<input type="text" class="text-line" name="lName">
+						<br><br>
+						<input  class="site-btn1" type="submit" name="approve" value="Approve">
+					</form>
+				</div>
+							
+				<?php
+					if ( isset($_POST['approve']) ){
+						
+						$as = $_POST['lName'];
+
+						$q="SELECT * from adminsTemp WHERE userName='$as'";
+						$sql = mysqli_query($con, $q);
+						$ret = mysqli_num_rows($sql);
+						
+						if( $ret > 0 ){
+							while ( $row = $sql->fetch_assoc() ){
+								$n =  $row['userName'];
+								$pc =  $row['passWord'];
+								$em =  $row['email'];
+								
+								$q="INSERT INTO admins VALUES ('$n','$pc','$em')";
+								$sql = mysqli_query($con, $q);
+		
+								$q="DELETE FROM adminsTemp WHERE userName='$n'";
+								$sql = mysqli_query($con, $q); 
+								echo '<script>alert("Admin Account Approved!")</script>';
+								echo "<script>document.location='approveAdmin.php'</script>";
 							}
 						}
-		
-					?>
-				</table>
-			</div>
+						else{
+							echo '<script>alert("Username doesnot Exits!")</script>';
+							echo "<script>document.location='approveAdmin.php'</script>";
+						}
+					}
+				?>
 		</div>
-	</section>
+    </section>
 
 	<!-- Footer section -->
 	<footer class="footer-section">
