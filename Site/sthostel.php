@@ -23,7 +23,7 @@ require('config.php');
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Students Details</title>
+	<title>Hostel Details</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="UOP-HMS">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,7 +78,7 @@ require('config.php');
     
     
 	<section class="DBbody" >
-        <h3 align="center">Student Details</h3>
+        <h3 align="center">Hostel Details</h3>
         <div class="stdetails">
             <?php
                 if (mysqli_num_rows($cq) > 0) {

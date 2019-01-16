@@ -204,7 +204,7 @@ ol {
 	background-color: #2f3332;
 	cursor: pointer;
 	text-align: center;
-	width: 250px;
+	width: 260px;
 	height: 220px;
     padding-top: 88px;
 	margin: 25px; 
@@ -680,6 +680,7 @@ ol {
 .DBbody{
 	padding-top: 130px;
 	padding-bottom: 20px;
+	min-height: 508px;
 	background-color:rgb(177, 172, 172);
 }
 

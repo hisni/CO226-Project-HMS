@@ -100,7 +100,7 @@
                         <tr>
                             <th>
                                 <detail>
-                                    Attach your payment proof here : 
+                                    Attach your payment proof here: 
                                 </detail>
                             </th>
                             <th>
