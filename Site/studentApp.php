@@ -20,7 +20,7 @@
         $query = "INSERT INTO students VALUES ( '$regNo', '$fName', '$lName', '$sex', '$dob', '$homeAdd', '$contactNo',  '$mail', '$faculty', '$enrolData', NULL, NULL, NULL )";
         mysqli_query($con,$query);
         echo '<script>alert("Details Saved!")</script>';
-        echo "<script>document.location='studentApp.php'</script>";
+        echo "<script>document.location='hostelApp.php'</script>";
     }
 ?>
 
